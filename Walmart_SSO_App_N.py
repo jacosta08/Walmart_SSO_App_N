@@ -148,6 +148,8 @@ if luminate_file and variants_file and process:
             if ratio < 0.6:
                 df.loc[group_idx, 'SSO_Qty'] = 0
 
+        df['Total_WHPKs'] = df['SSO_Qty'] / df['WHPK_Qty']
+
         # Display results
         st.success("✅ SSO allocation complete!")
 
